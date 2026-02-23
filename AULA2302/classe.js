@@ -1,0 +1,18 @@
+class Carro{
+    //atributos
+    modelo = 'S10 cabine dupla';
+    marca = 'Chevrolet';
+    ano = 2025;
+    preco = 200000;
+
+    //metodos
+    mover(){
+        console.log('Estou me movendo!');
+    }
+    mostrar(){
+        console.log('O carro é: ' + this.modelo + ' ' + this.marca + ' ' + this.ano + ' ' + this.preco);
+    }
+}
+const caminhonete = new Carro();//instanciar a class = criar objeto
+caminhonete.mover(); //utilizar métodos
+caminhonete.mostrar();
