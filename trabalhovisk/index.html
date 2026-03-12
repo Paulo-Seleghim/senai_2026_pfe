@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial: Criar Projeto React JS com Vite</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fab fa-react"></i>
+                <span>React + Vite Tutorial</span>
+            </div>
+            <nav class="nav">
+                <a href="#intro" class="nav-link active">Início</a>
+                <a href="#prerequisites" class="nav-link">Pré-requisitos</a>
+                <a href="#steps" class="nav-link">Passo a Passo</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="intro" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="badge">
+                    <i class="fas fa-bolt"></i> Tutorial Completo
+                </div>
+                <h1 class="hero-title">Crie seu Projeto <span class="gradient-text">React JS</span> com Vite</h1>
+                <p class="hero-subtitle">
+                    Aprenda a configurar um ambiente de desenvolvimento React moderno, rápido e otimizado usando Vite. 
+                    Tutorial passo-a-passo com exemplos práticos! ⚡
+                </p>
+                <div class="hero-buttons">
+                    <a href="#steps" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> Começar Agora
+                    </a>
+                    <a href="#prerequisites" class="btn btn-secondary">
+                        <i class="fas fa-list-check"></i> Ver Requisitos
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">⚡ 10x</div>
+                        <div class="stat-label">Mais Rápido</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">5 min</div>
+                        <div class="stat-label">Configuração</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Gratuito</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-buttons">
+                            <span class="btn-close"></span>
+                            <span class="btn-minimize"></span>
+                            <span class="btn-maximize"></span>
+                        </div>
+                        <div class="window-title">terminal</div>
+                    </div>
+                    <div class="window-content">
+                        <pre><code><span class="code-prompt">$</span> npm create vite@latest my-react-app
+<span class="code-success">✓</span> Select a framework: <span class="code-highlight">React</span>
+<span class="code-success">✓</span> Select a variant: <span class="code-highlight">JavaScript</span>
+
+<span class="code-comment"># Projeto criado com sucesso! 🎉</span></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Vite Section -->
+    <section class="why-vite">
+        <div class="container">
+            <h2 class="section-title">Por que usar Vite?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Extremamente Rápido</h3>
+                    <p>Hot Module Replacement (HMR) instantâneo. Atualizações em milissegundos.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Configuração Mínima</h3>
+                    <p>Funciona out-of-the-box com configurações sensatas e otimizadas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3>Build Otimizado</h3>
+                    <p>Usa Rollup para builds de produção altamente otimizados.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Plugins Rico</h3>
+                    <p>Ecossistema extensível com plugins para todas as necessidades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prerequisites Section -->
+    <section id="prerequisites" class="prerequisites">
+        <div class="container">
+            <h2 class="section-title">Pré-requisitos</h2>
+            <p class="section-description">Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:</p>
+            
+            <div class="prerequisites-grid">
+                <div class="prerequisite-card">
+                    <div class="prereq-header">
+                        <i class="fab fa-node-js"></i>
+                        <h3>Node.js</h3>
+                        <span class="version-badge">v18+</span>
+                    </div>
+                    <p>Ambiente de execução JavaScript necessário para executar o Vite e npm.</p>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Terminal</span>
+                            <button class="copy-btn" data-copy="node --version"><i class="fas fa-copy"></i> Copiar</button>
+                        </div>
+                        <pre><code>node --version</code></pre>
+                    </div>
+                    <a href="https://nodejs.org/" target="_blank" class="download-link">
+                        <i class="fas fa-download"></i> Baixar Node.js
+                    </a>
+                </div>
+
+                <div class="prerequisite-card">
+                    <div class="prereq-header">
+                        <i class="fas fa-box"></i>
+                        <h3>npm ou yarn</h3>
+                        <span class="version-badge">latest</span>
+                    </div>
+                    <p>Gerenciador de pacotes (já incluso com Node.js).</p>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Terminal</span>
+                            <button class="copy-btn" data-copy="npm --version"><i class="fas fa-copy"></i> Copiar</button>
+                        </div>
+                        <pre><code>npm --version</code></pre>
+                    </div>
+                </div>
+
+                <div class="prerequisite-card">
+                    <div class="prereq-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Editor de Código</h3>
+                        <span class="version-badge">recomendado</span>
+                    </div>
+                    <p>VS Code é altamente recomendado com extensões React.</p>
+                    <a href="https://code.visualstudio.com/" target="_blank" class="download-link">
+                        <i class="fas fa-download"></i> Baixar VS Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section id="steps" class="steps">
+        <div class="container">
+            <h2 class="section-title">Passo a Passo Completo</h2>
+            <p class="section-description">Siga este guia detalhado para criar seu primeiro projeto React com Vite</p>
+
+            <!-- Step 1 -->
+            <div class="step-card">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                    <h3 class="step-title">
+                        <i class="fas fa-folder-plus"></i>
+                        Criar o Projeto
+                    </h3>
+                    <p class="step-description">
+                        Use o comando <code>npm create vite</code> para iniciar um novo projeto React. Este comando usa o template oficial do Vite.
+                    </p>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span><i class="fas fa-terminal"></i> Terminal</span>
+                            <button class="copy-btn" data-copy="npm create vite@latest my-react-app -- --template react"><i class="fas fa-copy"></i> Copiar</button>
+                        </div>
+                        <pre><code><span class="code-comment"># Criar projeto com template React</span>
+npm create vite@latest my-react-app -- --template react
+
+<span class="code-comment"># Ou de forma interativa:</span>
+npm create vite@latest</code></pre>
+                    </div>
+                    <div class="info-box">
+                        <i class="fas fa-lightbulb"></i>
+                        <div>
+                            <strong>Dica:</strong> Você pode escolher entre <code>react</code> (JavaScript) ou <code>react-ts</code> (TypeScript).
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                    <h3 class="step-title">
+                        <i class="fas fa-terminal"></i>
+                        Navegar até o Diretório
+                    </h3>
+                    <p class="step-description">
+                        Entre na pasta do projeto recém-criado.
+                    </p>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span><i class="fas fa-terminal"></i> Terminal</span>
+                            <button class="copy-btn" data-copy="cd my-react-app"><i class="fas fa-copy"></i> Copiar</button>
+                        </div>
+                        <pre><code>cd my-react-app</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                    <h3 class="step-title">
+                        <i class="fas fa-download"></i>
+                        Instalar Dependências
+                    </h3>
+                    <p class="step-description">
+                        Instale todos os pacotes necessários especificados no <code>package.json</code>.
+                    </p>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span><i class="fas fa-terminal"></i> Terminal</span>
+                            <button class="copy-btn" data-copy="npm install"><i class="fas fa-copy"></i> Copiar</button>
+                        </div>
+                        <pre><code><span class="code-comment"># Com npm:</span>
+npm install
+
+<span class="code-comment"># Ou com yarn:</span>
+yarn
+
+<span class="code-comment"># Ou com pnpm:</span>
+pnpm install</code></pre>
+                    </div>
+                    <div class="progress-indicator">
+                        <div class="progress-step active">
+                            <i class="fas fa-check"></i>
+                            <span>Baixando pacotes</span>
+                        </div>
+                        <div class="progress-step">
+                            <i class="fas fa-cog"></i>
+                            <span>Instalando</span>
+                        </div>
+                        <div class="progress-step">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Concluído</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-card">
+                <div class="step-number">04</div>
+                <div class="step-content">
+                    <h3 class="step-title">
+                        <i class="fas fa-play"></i>
+                        Iniciar o Servidor de Desenvolvimento
+                    </h3>
+                    <p class="step-description">
+                        Execute o servidor de desenvolvimento para visualizar sua aplicação React em tempo real.
+                    </p>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span><i class="fas fa-terminal"></i> Terminal</span>
+                            <button class="copy-btn" data-copy="npm run dev"><i class="fas fa-copy"></i> Copiar</button>
+                        </div>
+                        <pre><code>npm run dev</code></pre>
+                    </div>
+                    <div class="success-box">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Servidor iniciado!</strong> Acesse <code>http://localhost:5173</code> no seu navegador.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-card">
+                <div class="step-number">05</div>
+                <div class="step-content">
+                    <h3 class="step-title">
+                        <i class="fas fa-folder-tree"></i>
+                        Estrutura do Projeto
+                    </h3>
+                    <p class="step-description">
+                        Entenda a estrutura de arquivos gerada pelo Vite:
+                    </p>
+                    <div class="file-tree">
+                        <div class="file-item folder">
+                            <i class="fas fa-folder"></i> my-react-app/
+                        </div>
+                        <div class="file-item indent-1 folder">
+                            <i class="fas fa-folder"></i> node_modules/
+                        </div>
+                        <div class="file-item indent-1 folder">
+                            <i class="fas fa-folder"></i> public/
+                        </div>
+                        <div class="file-item indent-2 file">
+                            <i class="fas fa-image"></i> vite.svg
+                        </div>
+                        <div class="file-item indent-1 folder">
+                            <i class="fas fa-folder"></i> src/
+                        </div>
+                        <div class="file-item indent-2 file highlight">
+                            <i class="fab fa-react"></i> App.jsx
+                        </div>
+                        <div class="file-item indent-2 file">
+                            <i class="fas fa-file-code"></i> App.css
+                        </div>
+                        <div class="file-item indent-2 file highlight">
+                            <i class="fas fa-file-code"></i> main.jsx
+                        </div>
+                        <div class="file-item indent-2 file">
+                            <i class="fas fa-file-code"></i> index.css
+                        </div>
+                        <div class="file-item indent-1 file">
+                            <i class="fas fa-file"></i> .gitignore
+                        </div>
+                        <div class="file-item indent-1 file">
+                            <i class="fas fa-file-code"></i> index.html
+                        </div>
+                        <div class="file-item indent-1 file highlight">
+                            <i class="fas fa-cog"></i> vite.config.js
+                        </div>
+                        <div class="file-item indent-1 file">
+                            <i class="fas fa-file-alt"></i> package.json
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <i class="fas fa-info-circle"></i>
+                        <div>
+                            <strong>Arquivos principais:</strong>
+                            <ul>
+                                <li><code>main.jsx</code> - Ponto de entrada da aplicação</li>
+                                <li><code>App.jsx</code> - Componente principal</li>
+                                <li><code>vite.config.js</code> - Configurações do Vite</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="step-card">
+                <div class="step-number">06</div>
+                <div class="step-content">
+                    <h3 class="step-title">
+                        <i class="fas fa-code"></i>
+                        Editar o Componente App
+                    </h3>
+                    <p class="step-description">
+                        Vamos criar um componente simples para testar. Abra <code>src/App.jsx</code> e substitua pelo código:
+                    </p>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span><i class="fab fa-react"></i> src/App.jsx</span>
+                            <button class="copy-btn" data-copy="import { useState } from 'react'
+import './App.css'
+
+function App() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <div className=&quot;App&quot;>
+      <h1>Olá, React + Vite! 🚀</h1>
+      <div className=&quot;card&quot;>
+        <button onClick={() => setCount((count) => count + 1)}>
+          Contador: {count}
+        </button>
+      </div>
+      <p className=&quot;read-the-docs&quot;>
+        Edite src/App.jsx e salve para testar HMR
+      </p>
+    </div>
+  )
+}
+
+export default App"><i class="fas fa-copy"></i> Copiar</button>
+                        </div>
+                        <pre><code><span class="code-keyword">import</span> { useState } <span class="code-keyword">from</span> <span class="code-string">'react'</span>
+<span class="code-keyword">import</span> <span class="code-string">'./App.css'</span>
+
+<span class="code-keyword">function</span> <span class="code-function">App</span>() {
+  <span class="code-keyword">const</span> [count, setCount] = <span class="code-function">useState</span>(<span class="code-number">0</span>)
+
+  <span class="code-keyword">return</span> (
+    &lt;<span class="code-tag">div</span> <span class="code-attr">className</span>=<span class="code-string">"App"</span>&gt;
+      &lt;<span class="code-tag">h1</span>&gt;Olá, React + Vite! 🚀&lt;/<span class="code-tag">h1</span>&gt;
+      &lt;<span class="code-tag">div</span> <span class="code-attr">className</span>=<span class="code-string">"card"</span>&gt;
+        &lt;<span class="code-tag">button</span> <span class="code-attr">onClick</span>={() =&gt; <span class="code-function">setCount</span>((count) =&gt; count + <span class="code-number">1</span>)}&gt;
+          Contador: {count}
+        &lt;/<span class="code-tag">button</span>&gt;
+      &lt;/<span class="code-tag">div</span>&gt;
+      &lt;<span class="code-tag">p</span> <span class="code-attr">className</span>=<span class="code-string">"read-the-docs"</span>&gt;
+        Edite src/App.jsx e salve para testar HMR
+      &lt;/<span class="code-tag">p</span>&gt;
+    &lt;/<span class="code-tag">div</span>&gt;
+  )
+}
+
+<span class="code-keyword">export default</span> App</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="step-card">
+                <div class="step-number">07</div>
+                <div class="step-content">
+                    <h3 class="step-title">
+                        <i class="fas fa-hammer"></i>
+                        Build para Produção
+                    </h3>
+                    <p class="step-description">
+                        Quando estiver pronto para publicar, crie uma versão otimizada para produção:
+                    </p>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span><i class="fas fa-terminal"></i> Terminal</span>
+                            <button class="copy-btn" data-copy="npm run build"><i class="fas fa-copy"></i> Copiar</button>
+                        </div>
+                        <pre><code>npm run build</code></pre>
+                    </div>
+                    <div class="info-box">
+                        <i class="fas fa-info-circle"></i>
+                        <div>
+                            Os arquivos otimizados serão gerados na pasta <code>dist/</code>. Para testar localmente:
+                        </div>
+                    </div>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span><i class="fas fa-terminal"></i> Terminal</span>
+                            <button class="copy-btn" data-copy="npm run preview"><i class="fas fa-copy"></i> Copiar</button>
+                        </div>
+                        <pre><code>npm run preview</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commands Reference -->
+    <section class="commands-reference">
+        <div class="container">
+            <h2 class="section-title">Comandos Úteis</h2>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <div class="command-header">
+                        <code>npm run dev</code>
+                    </div>
+                    <p>Inicia o servidor de desenvolvimento</p>
+                </div>
+                <div class="command-card">
+                    <div class="command-header">
+                        <code>npm run build</code>
+                    </div>
+                    <p>Gera build de produção otimizado</p>
+                </div>
+                <div class="command-card">
+                    <div class="command-header">
+                        <code>npm run preview</code>
+                    </div>
+                    <p>Visualiza o build de produção localmente</p>
+                </div>
+                <div class="command-card">
+                    <div class="command-header">
+                        <code>npm install [pacote]</code>
+                    </div>
+                    <p>Instala um novo pacote npm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-chevron-right"></i>
+                        <h3>Por que Vite é mais rápido que Create React App?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Vite usa ESM (ES Modules) nativos do navegador durante o desenvolvimento, eliminando a necessidade de bundling. Isso resulta em inicialização instantânea e HMR extremamente rápido, independentemente do tamanho do projeto.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-chevron-right"></i>
+                        <h3>Posso usar TypeScript com Vite?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! Use o template <code>react-ts</code> ao criar o projeto: <code>npm create vite@latest my-app -- --template react-ts</code></p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-chevron-right"></i>
+                        <h3>Como adicionar bibliotecas como React Router ou Zustand?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Use npm para instalar qualquer biblioteca: <code>npm install react-router-dom</code> ou <code>npm install zustand</code></p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-chevron-right"></i>
+                        <h3>O Vite funciona com outras frameworks além de React?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! Vite suporta Vue, Svelte, Preact, Lit e vanilla JavaScript. É uma ferramenta de build agnóstica a frameworks.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-chevron-right"></i>
+                        <h3>Como configurar variáveis de ambiente?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Crie um arquivo <code>.env</code> na raiz do projeto e use variáveis prefixadas com <code>VITE_</code>. Exemplo: <code>VITE_API_URL=https://api.example.com</code></p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-chevron-right"></i>
+                        <h3>Onde posso fazer deploy do meu projeto?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Você pode fazer deploy em Vercel, Netlify, GitHub Pages, Render ou qualquer serviço de hospedagem estática. Basta executar <code>npm run build</code> e fazer upload da pasta <code>dist/</code>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources">
+        <div class="container">
+            <h2 class="section-title">Recursos Adicionais</h2>
+            <div class="resources-grid">
+                <a href="https://vitejs.dev/" target="_blank" class="resource-card">
+                    <div class="resource-icon">📚</div>
+                    <h3>Documentação Oficial do Vite</h3>
+                    <p>Guia completo e referência da API</p>
+                    <span class="external-link"><i class="fas fa-external-link-alt"></i></span>
+                </a>
+                <a href="https://react.dev/" target="_blank" class="resource-card">
+                    <div class="resource-icon">⚛️</div>
+                    <h3>Documentação do React</h3>
+                    <p>Aprenda React do zero ao avançado</p>
+                    <span class="external-link"><i class="fas fa-external-link-alt"></i></span>
+                </a>
+                <a href="https://github.com/vitejs/awesome-vite" target="_blank" class="resource-card">
+                    <div class="resource-icon">🎯</div>
+                    <h3>Awesome Vite</h3>
+                    <p>Coleção de recursos e plugins</p>
+                    <span class="external-link"><i class="fas fa-external-link-alt"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fab fa-react"></i> React + Vite Tutorial</h3>
+                    <p>Tutorial interativo criado para ajudar desenvolvedores a começar com React e Vite de forma rápida e eficiente.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="https://vitejs.dev" target="_blank">Vite</a></li>
+                        <li><a href="https://react.dev" target="_blank">React</a></li>
+                        <li><a href="https://nodejs.org" target="_blank">Node.js</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#steps">Passo a Passo</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#prerequisites">Requisitos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 React + Vite Tutorial. Criado com ❤️ para estudantes de desenvolvimento web.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
