@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<title>SESI Mirandópolis</title>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 70px;
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                url('./foto3.png') center/cover no-repeat;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.section-title {
+    font-weight: bold;
+    color: #c40000;
+    margin-bottom: 20px;
+}
+
+.card {
+    border: none;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+footer {
+    font-size: 0.9rem;
+}
+</style>
+</head>
+
+<body class="bg-light">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top shadow">
+<div class="container">
+<a class="navbar-brand fw-bold" href="#home">SESI Mirandópolis</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
+<li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+<li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
+<li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+<div class="container">
+<h1 class="display-4 fw-bold">Bem-vindo ao SESI Mirandópolis</h1>
+<p class="lead">Educação de excelência formando cidadãos para o futuro.</p>
+<a href="#sobre" class="btn btn-danger btn-lg mt-3">Conheça mais</a>
+</div>
+</section>
+
+<!-- CARROSSEL -->
+<section class="py-5 bg-white">
+<div class="container">
+<div id="carouselSESI" class="carousel slide shadow rounded" data-bs-ride="carousel">
+
+<!-- Indicadores -->
+<div class="carousel-indicators">
+<button type="button" data-bs-target="#carouselSESI" data-bs-slide-to="0" class="active"></button>
+<button type="button" data-bs-target="#carouselSESI" data-bs-slide-to="1"></button>
+<button type="button" data-bs-target="#carouselSESI" data-bs-slide-to="2"></button>
+</div>
+
+<!-- Imagens -->
+<div class="carousel-inner rounded">
+
+<div class="carousel-item active">
+<img src="./foto1.jpg" class="d-block w-100" alt="Estrutura do SESI">
+</div>
+
+<div class="carousel-item">
+<img src="./foto2.jpg" class="d-block w-100" alt="Atividades educacionais">
+</div>
+
+<div class="carousel-item">
+<img src="./foto3.png" class="d-block w-100" alt="Entrada do SESI">
+</div>
+
+</div>
+
+<!-- Controles -->
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselSESI" data-bs-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</button>
+
+<button class="carousel-control-next" type="button" data-bs-target="#carouselSESI" data-bs-slide="next">
+<span class="carousel-control-next-icon"></span>
+</button>
+
+</div>
+</div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="py-5 bg-light text-center">
+<div class="container">
+<h2 class="section-title">Sobre o SESI</h2>
+<p class="lead">
+O SESI promove educação inovadora com foco em tecnologia, cidadania e desenvolvimento integral dos alunos.
+</p>
+</div>
+</section>
+
+<!-- CURSOS -->
+<section id="cursos" class="py-5 bg-white">
+<div class="container text-center">
+<h2 class="section-title">Nossos Cursos</h2>
+
+<div class="row g-4 mt-3">
+
+<div class="col-md-4">
+<div class="card shadow p-4 h-100">
+<h5 class="fw-bold">Ensino Fundamental</h5>
+<p>Base sólida para formação acadêmica e pessoal.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow p-4 h-100">
+<h5 class="fw-bold">Ensino Médio</h5>
+<p>Preparação para vestibulares e mercado de trabalho.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow p-4 h-100">
+<h5 class="fw-bold">Projetos Educacionais</h5>
+<p>Inovação, tecnologia e desenvolvimento de habilidades.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="py-5 bg-light text-center">
+<div class="container">
+<h2 class="section-title">Contato</h2>
+<p class="lead">📍 Mirandópolis - SP</p>
+<p class="lead">📞 (18) 0000-0000</p>
+
+<a href="mailto:contato@sesimirandopolis.com" class="btn btn-danger btn-lg mt-3">
+Enviar Email
+</a>
+</div>
+</section>
+
+<!-- RODAPÉ -->
+<footer class="bg-danger text-white text-center py-4">
+<div class="container">
+© 2026 SESI Mirandópolis <br>
+Educação que transforma vidas.
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
