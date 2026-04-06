@@ -1,0 +1,88 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #f4f6fb, #e9ecf7);
+  color: #2c2c2c;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+}
+
+/* CONTAINER PRINCIPAL */
+
+#root {
+  width: 100%;
+  max-width: 900px;
+}
+
+/* TITULO */
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #1f2937;
+  letter-spacing: 1px;
+}
+
+/* LISTA */
+
+ul {
+  list-style: none;
+  display: grid;
+  gap: 16px;
+}
+
+/* CARD DAS FRUTAS */
+
+li {
+  background: white;
+  padding: 18px 22px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: all 0.25s ease;
+  border-left: 5px solid #6366f1;
+}
+
+/* HOVER */
+
+li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* NOME DA FRUTA */
+
+li h3 {
+  font-size: 18px;
+  color: #374151;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  li {
+    padding: 16px;
+  }
+
+}
